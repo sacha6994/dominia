@@ -19,7 +19,7 @@ export default async function DashboardLayout({
   return (
     <div className="bg-glow flex min-h-screen bg-brand-base">
       <Sidebar user={user} />
-      <main className="relative z-10 flex-1 overflow-auto p-6 lg:p-8">{children}</main>
+      <main className="relative z-10 flex-1 overflow-auto p-6 pt-16 md:pt-6 lg:p-8">{children}</main>
     </div>
   );
 }
