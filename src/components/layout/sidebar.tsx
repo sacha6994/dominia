@@ -84,14 +84,26 @@ export default function Sidebar({ user }: { user: User }) {
 
   return (
     <>
-      {/* Mobile hamburger button */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="fixed left-4 top-4 z-40 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-surface text-slate-400 ring-1 ring-white/[0.08] md:hidden"
-        aria-label="Ouvrir le menu"
-      >
-        <span className="text-xl leading-none">☰</span>
-      </button>
+      {/* Mobile top bar */}
+      <div className="fixed left-0 right-0 top-0 z-30 flex h-14 items-center gap-3 border-b border-white/[0.06] bg-brand-surface px-4 md:hidden">
+        <button
+          onClick={() => setIsOpen(true)}
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-400 hover:text-slate-200"
+          aria-label="Ouvrir le menu"
+        >
+          <span className="text-xl leading-none">☰</span>
+        </button>
+        <Link href="/dashboard" className="flex items-center">
+          <Image
+            src="/dominia-logo-v2.png"
+            alt="Dominia"
+            width={120}
+            height={34}
+            priority
+            className="w-auto"
+          />
+        </Link>
+      </div>
 
       {/* Mobile overlay backdrop */}
       <div
