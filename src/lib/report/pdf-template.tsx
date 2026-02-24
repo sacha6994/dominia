@@ -227,7 +227,7 @@ export function MonthlyReport({ domains, alerts, year, month, generatedAt }: Rep
           <View style={s.logoBox}>
             <Image
               style={s.logoImage}
-              src={path.join(process.cwd(), "public", "dominia-logo-v2.png")}
+              src={path.join(process.cwd(), "public", "dominia-logo-v3.png")}
             />
           </View>
           <Text style={s.period}>Rapport — {periodLabel}</Text>
