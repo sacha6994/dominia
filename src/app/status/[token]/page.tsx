@@ -182,12 +182,13 @@ export default async function PublicStatusPage({
       {/* Header */}
       <header className="border-b border-gray-200 bg-white">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <img
               src="/dominia-logo-v2.png"
               alt="Dominia"
-              style={{ height: 44, width: "auto" }}
+              style={{ height: 50, width: "auto" }}
             />
+            <span style={{ fontSize: 20, fontWeight: 700, color: "#000000" }}>Dominia</span>
           </div>
           <span className="text-xs text-gray-400">Page de statut publique</span>
         </div>
