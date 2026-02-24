@@ -45,15 +45,9 @@ const s = StyleSheet.create({
   logoBox: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 10,
   },
   logoImage: {
     height: 70,
-  },
-  logoText: {
-    fontSize: 28,
-    fontFamily: "Helvetica-Bold",
-    color: "#000000",
   },
   period: {
     fontSize: 12,
@@ -235,7 +229,6 @@ export function MonthlyReport({ domains, alerts, year, month, generatedAt }: Rep
               style={s.logoImage}
               src={path.join(process.cwd(), "public", "dominia-logo-v2.png")}
             />
-            <Text style={s.logoText}>Dominia</Text>
           </View>
           <Text style={s.period}>Rapport — {periodLabel}</Text>
         </View>
