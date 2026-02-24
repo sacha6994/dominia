@@ -1,11 +1,13 @@
 import React from "react";
 import {
   Document,
+  Image,
   Page,
   View,
   Text,
   StyleSheet,
 } from "@react-pdf/renderer";
+import path from "path";
 import type { Domain, AlertSent } from "@/types";
 
 // ── Styles ──────────────────────────────────────────────────
@@ -43,25 +45,9 @@ const s = StyleSheet.create({
   logoBox: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 8,
   },
-  logoSquare: {
-    width: 32,
-    height: 32,
-    backgroundColor: colors.primary,
-    borderRadius: 6,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  logoLetter: {
-    color: colors.white,
-    fontSize: 18,
-    fontFamily: "Helvetica-Bold",
-  },
-  logoText: {
-    fontSize: 18,
-    fontFamily: "Helvetica-Bold",
-    color: colors.dark,
+  logoImage: {
+    height: 40,
   },
   period: {
     fontSize: 12,
@@ -239,10 +225,10 @@ export function MonthlyReport({ domains, alerts, year, month, generatedAt }: Rep
         {/* Header */}
         <View style={s.header}>
           <View style={s.logoBox}>
-            <View style={s.logoSquare}>
-              <Text style={s.logoLetter}>D</Text>
-            </View>
-            <Text style={s.logoText}>Dominia</Text>
+            <Image
+              style={s.logoImage}
+              src={path.join(process.cwd(), "public", "dominia-logo-v2.png")}
+            />
           </View>
           <Text style={s.period}>Rapport — {periodLabel}</Text>
         </View>
