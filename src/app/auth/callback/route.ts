@@ -28,8 +28,6 @@ export async function GET(request: NextRequest) {
         },
       }
     );
-    // Purger l'ancienne session avant d'établir la nouvelle
-    await supabase.auth.signOut();
     await supabase.auth.exchangeCodeForSession(code);
   }
 
