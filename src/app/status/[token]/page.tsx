@@ -186,7 +186,7 @@ export default async function PublicStatusPage({
             <img
               src="/dominia-logo-v2.png"
               alt="Dominia"
-              style={{ height: 40, width: "auto" }}
+              style={{ height: 44, width: "auto" }}
             />
           </div>
           <span className="text-xs text-gray-400">Page de statut publique</span>

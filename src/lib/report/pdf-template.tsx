@@ -47,7 +47,7 @@ const s = StyleSheet.create({
     alignItems: "center",
   },
   logoImage: {
-    height: 40,
+    height: 48,
   },
   period: {
     fontSize: 12,
