@@ -28,9 +28,6 @@ export async function GET(request: NextRequest) {
         },
       }
     );
-    // Nettoyer l'ancienne session avant d'établir la nouvelle
-    // (safe ici : on est après la redirection Google, le code OAuth est dans l'URL)
-    await supabase.auth.signOut();
     await supabase.auth.exchangeCodeForSession(code);
   }
 
